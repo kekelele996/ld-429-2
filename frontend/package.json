@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 18809",
     "build": "tsc -b && vite build",
-    "preview": "vite preview --host 0.0.0.0 --port 18809"
+    "preview": "vite preview --host 0.0.0.0 --port 18809",
+    "test": "vitest run"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
@@ -30,6 +31,7 @@
     "postcss": "^8.5.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3",
-    "vite": "^6.0.7"
+    "vite": "^6.0.7",
+    "vitest": "^4.1.8"
   }
 }

@@ -37,7 +37,7 @@ export const useVisitorStore = create<VisitorState>((set, get) => ({
           visitor.visitorId === currentVisitorId
             ? {
                 ...visitor,
-                viewedArtworkIds: Array.from(new Set([...visitor.viewedArtworkIds, artworkId])),
+                viewedArtworkIds: [...visitor.viewedArtworkIds, artworkId],
                 onlineStatus: VisitorStatus.InGallery,
               }
             : visitor,
