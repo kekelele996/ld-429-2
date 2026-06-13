@@ -14,7 +14,7 @@ export const useRoomStore = create<RoomState>((set) => ({
   selectedRoomId: rooms[0]?.id ?? '',
   updateWallColor: (roomId, color) =>
     set((state) => ({
-      rooms: state.rooms.map((room) => (room.id !== roomId ? { ...room, wallColor: color } : room)),
+      rooms: state.rooms.map((room) => (room.id === roomId ? { ...room, wallColor: color } : room)),
     })),
   selectRoom: (roomId) => set({ selectedRoomId: roomId }),
 }));

@@ -17,7 +17,7 @@ export function MiniMap({ room, artworks }: { room: GalleryRoom; artworks: Artwo
             className="absolute h-3 w-3 -translate-x-1/2 -translate-y-1/2 bg-vermilion"
             style={{
               left: `${((artwork.mountPosition.x + room.size.width / 2) / room.size.width) * 100}%`,
-              top: `${((artwork.mountPosition.z + room.size.depth / 2) / room.size.width) * 100}%`,
+              top: `${((artwork.mountPosition.z + room.size.depth / 2) / room.size.depth) * 100}%`,
             }}
           />
         ))}

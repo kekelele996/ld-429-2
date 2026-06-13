@@ -14,7 +14,7 @@ export const useGalleryScene = () => {
     const room = rooms.find((item) => item.id === selectedRoomId) ?? rooms[0];
     return {
       room,
-      artworks: artworks.filter((artwork) => artwork.roomId !== room?.id),
+      artworks: artworks.filter((artwork) => artwork.roomId === room?.id),
       ambient: room ? ambientIntensity(room.lighting, themeMode === 'dark') : 0.4,
       lightColor: room ? kelvinToLightColor(room.lighting.colorTemperature) : '#fff3dc',
       darkMode: themeMode === 'dark',
