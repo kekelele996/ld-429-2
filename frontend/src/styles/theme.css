@@ -1,0 +1,40 @@
+:root {
+  --color-bg: #f4efe6;
+  --color-panel: #fffaf1;
+  --color-ink: #1d1d1b;
+  --color-muted: #6c675e;
+  --color-line: #d7cbb9;
+  --color-accent: #b7472a;
+  --color-blue: #244b7a;
+  --color-moss: #60745d;
+}
+
+[data-theme='dark'] {
+  --color-bg: #171511;
+  --color-panel: #211f1a;
+  --color-ink: #f3ead9;
+  --color-muted: #b9ad9c;
+  --color-line: #40392d;
+  --color-accent: #e07a50;
+  --color-blue: #7fa5c8;
+  --color-moss: #9bad7f;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(90deg, rgba(183, 71, 42, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(36, 75, 122, 0.05) 1px, transparent 1px),
+    var(--color-bg);
+  background-size: 36px 36px;
+}
+
+.panel {
+  border: 1px solid var(--color-line);
+  background: color-mix(in srgb, var(--color-panel) 94%, transparent);
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-accent) 70%, white);
+  outline-offset: 2px;
+}
